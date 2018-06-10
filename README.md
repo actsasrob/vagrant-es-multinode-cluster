@@ -10,6 +10,7 @@ Elasticsearch and kibana are installed via the Ansible playbooks found here: (ht
 To use this project:
 1. Install VirtualBox (tested with v5.1.36)
 1. Install Vagrant (tested with Vagrant 1.9.3)
+1. Install CentOS7 Vagrant box: `vagrant box add centos/7`
 1. Git clone this project: `git clone git@github.com:actsasrob/vagrant-es-multinode-cluster.git`
 1. Edit Vagrantfile to contain the desired number of master, ingest, data nodes
 1. Run `vagrant up` to create the servers
