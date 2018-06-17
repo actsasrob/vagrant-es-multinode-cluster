@@ -26,6 +26,14 @@ To use this project:
     autorefresh=1
     type=rpm-md
     ```
+1. Update geerlingguy.kibana/tasks/main.yml
+    ```change:
+    - name: Install Kibana.
+      package: name=kibana state=present
+    to:
+    - name: Install Kibana.
+      package: name=kibana-{{ kibana_version }} state=present
+    ```
 1. From Ansible Galaxy install role elastic.elasticsearch: `ansible-galaxy install elastic.elasticsearch`
 1. Git clone the Ansible playbooks: `git clone git@github.com:actsasrob/ansible-plays.git` 
 1. Edit the <path to ansible-plays dir>/inventory/es01.ini file and change the ansible_ssh_private_key_file line to point to where the vagrant-es-multinode-cluster dir lives
